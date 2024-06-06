@@ -1,5 +1,4 @@
 import { Line } from "react-chartjs-2";
-import { CityDailyWeatherData } from "../../interfaces/CityWeatherData/CityDailyWeatherData";
 
 const CitiesListItemComponent = ({
   weatherData,

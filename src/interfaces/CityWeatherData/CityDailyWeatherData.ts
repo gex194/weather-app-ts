@@ -1,7 +1,5 @@
-import { Dayjs } from "dayjs";
-
-export interface CityDailyWeatherData {
-    time: Dayjs[],
+interface CityDailyWeatherData {
+    time: string[],
     temperature2mMax: number[],
     temperature2mMin: number[],
 }
