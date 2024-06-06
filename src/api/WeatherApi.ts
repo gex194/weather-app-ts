@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import { fetchWeatherApi } from "openmeteo";
 
 class WeatherApi {
@@ -59,7 +60,7 @@ class WeatherApi {
           Number(daily.time()),
           Number(daily.timeEnd()),
           daily.interval()
-        ).map((t) => new Date((t + utcOffsetSeconds) * 1000)),
+        ).map((t) => dayjs((t + utcOffsetSeconds) * 1000).format("DD MMMM")),
         temperature2mMax: daily.variables(0)!.valuesArray()!,
         temperature2mMin: daily.variables(1)!.valuesArray()!,
       },
